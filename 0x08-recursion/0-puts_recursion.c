@@ -1,13 +1,14 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * _puts_recursion - function like puts ();
- * @s: input
+ * _puts_recursion - recursive string print
+ * @s: string
  *
- * Return: nothing
+ * Return: void
  */
 void _puts_recursion(char *s)
 {
+	/* test case */
 	if (*s == '\0')
 	{
 		_putchar('\n');
@@ -16,5 +17,5 @@ void _puts_recursion(char *s)
 
 	_putchar(*s);
 	s++;
-	_puts_recursion(s);
+	_puts_recursion(s + 1);
 }
